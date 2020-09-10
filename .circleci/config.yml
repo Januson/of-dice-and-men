@@ -33,8 +33,8 @@ jobs:
       - run:
           name: Prepare release branch
           command: |
-            git branch -D master
-            git checkout --orphan master
+            git branch -D gh-pages
+            git checkout --orphan gh-pages
             git rm -rf .
             git clean -fxd
       - attach_workspace:
@@ -56,7 +56,7 @@ jobs:
             git add -fA
             git status
             git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
-            git push origin master --force
+            git push origin gh-pages --force
             echo "Deployed successfully!"
 
 workflows:
@@ -67,11 +67,10 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
                 - gh-pages
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: devel
+              only: master
