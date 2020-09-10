@@ -33,7 +33,6 @@ jobs:
       - run:
           name: Prepare release branch
           command: |
-            git branch -D gh-pages
             git checkout --orphan gh-pages
             git rm -rf .
             git clean -fxd
