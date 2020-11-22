@@ -3,6 +3,7 @@
 - [Úvod](introduction.md)
 - [Základní pravidla](core_rules.md)
   - [Výzvy](core_rules/challenges.md)
+  - [Výhody](core_rules/advantages.md)
   - [Pomoc](core_rules/assistance.md)
 - [Tvorba postavy](character_creation.md)
   - [Vlastnosti postavy](character_creation/attributes.md)
