@@ -18,7 +18,7 @@ Každá výzva má svou úroveň výzvy v závislosti na své obtížnosti pro o
 | `Nepředstavitelně obtížný úkol` |       9      |
 | `Nemožný úkol`                  |      10      |
 
-Výzvy mohou mít jednu ze dvou forem; Činy nebo spory.
+Výzvy mohou mít jednu ze dvou forem; Činy nebo Střety.
 
 ## Činy
 Čin je jakýkoliv úkon, který hráč vykoná proti něčemu, co mu nemůže svévolně odporovat. Vyšplhat po laně, přeskočit propast, vykovat meč, to všechno mohou být činy. Lano, propast ani kutá ocel se nemohou bránit. Lano může být kluzké, propast může být široká, ale to pouze zvyšuje úroveň výzvy, kterou je potřeba překonat.
@@ -27,8 +27,8 @@ Výzvy mohou mít jednu ze dvou forem; Činy nebo spory.
 >
 > Vypravěč určí, že otevření tohoto honosného zámku má úroveň výzvy 4.
 
-## Spory
-Spor nastává, když se hráč pokouší o úkon proti něčemu, co se může bránit. Kupec si nenechá jen tak vybrat kapsu. Pokud si zloděje všimne, obratem přivolá stráže. Pronásledovaný nečeká až je dopaden, ale bude se snažit své pronásledovatele setřást. V případě sporu určuje úroveň výzvy počet úspěchů dosažený protivníkem.
+## Střety
+Střet nastává, když se hráč pokouší o úkon proti něčemu, co se může bránit. Kupec si nenechá jen tak vybrat kapsu. Pokud si zloděje všimne, obratem přivolá stráže. Pronásledovaný nečeká až je dopaden, ale bude se snažit své pronásledovatele setřást. V případě střetu určuje úroveň výzvy počet úspěchů dosažený protivníkem.
 
 > Astrid má proč přišla. Teď potřebuje se získaným lupem rychle do bezpečí svého úkrytu. K tomu však potřebuje tiše proklouznout kolem hlídače stojícího u brány.
 >
