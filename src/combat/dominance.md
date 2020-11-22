@@ -50,4 +50,4 @@ Hod každého hrdiny je porovnán s hodem postav ostatních hráčů a nehráčs
 ### Zranění
 Způsobená zranění se nesčítají ve smrtelnosti, ale sčítá se jimi obdržený postih. To znamená, že 2 střední zranění nezpůsobí vážné zranění, ale postava obdrží postih -4K6 (2 * 2K6).
 
-Duncan bojuje se skřetem. Začínal boj se 7k6. V přechozích kolech ale utržil lehké a střední zranění. Jeho útok je tedy 4k6(7k6 - (1k6 + 2k6)) 
+> Duncan bojuje se skřetem. Začínal boj se 7k6. V přechozích kolech ale utržil lehké a střední zranění. Jeho útok je tedy 4k6(7k6 - (1k6 + 2k6)) 
