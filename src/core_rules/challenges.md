@@ -2,21 +2,21 @@
 
 Svět je plný nástrah. Hráči budou na svých cestách čelit nebezpečí a překážkám. Těmto překážkám říkame výzvy.
 
-Každá výzva má svou úroveň výzvy v závislosti na své obtížnosti pro obyčejného člověka. Úroveň výzvy závisí pouze na vůli vypravěče a může sahat od 1 (běžné či rutinní úkoly) až po 10 (nemožně obtížné úkoly).
+Každá výzva má svou úroveň výzvy v závislosti na své obtížnosti pro obyčejného člověka. Úroveň výzvy závisí pouze na vůli vypravěče a může sahat od 0 (běžné či rutinní úkoly) až po 9 (nemožně obtížné úkoly).
 
 
 |  Úkol                           | Úroveň výzvy |
 |---------------------------------|--------------|
-| `Snadný úkol`                   |       1      |
-| `Běžný úkol`                    |       2      |
-| `Neobvyklý úkol`                |       3      |
-| `Odborný úkol`                  |       4      |
-| `Obtížný úkol`                  |       5      |
-| `Velice obtížný úkol`           |       6      |
-| `Extrémně obtížný úkol`         |       7      |
-| `Neskutečně obtížný úkol`       |       8      |
-| `Nepředstavitelně obtížný úkol` |       9      |
-| `Nemožný úkol`                  |      10      |
+| `Snadný úkol`                   |       0      |
+| `Běžný úkol`                    |       1      |
+| `Neobvyklý úkol`                |       2      |
+| `Odborný úkol`                  |       3      |
+| `Obtížný úkol`                  |       4      |
+| `Velice obtížný úkol`           |       5      |
+| `Extrémně obtížný úkol`         |       6      |
+| `Neskutečně obtížný úkol`       |       7      |
+| `Nepředstavitelně obtížný úkol` |       8      |
+| `Nemožný úkol`                  |       9      |
 
 Výzvy mohou mít jednu ze dvou forem; Činy nebo Střety.
 
@@ -36,7 +36,7 @@ Střet nastává, když se hráč pokouší o úkon proti něčemu, co se může
 
 ## Kostky
 
-Pro zdolání výzvy musí hráč dosáhnout alespoň takového množství úspěchů, jaká je úroveň výzvy. Lichá čísla značí neúspěchy, sudá značí úspěchy.
+Pro zdolání výzvy musí hráč dosáhnout alespoň o jeden úspěch více, něž jaká je úroveň výzvy. Lichá čísla značí neúspěchy, sudá značí úspěchy.
 
 Pro každý čin, který se hráč chystá provést, vypravěč zhodnotí a posoudí jeho obtížnost. Poté mu přiřadí úroveň výzvy (CR) a tu se hráč pokusí překonat.
 
