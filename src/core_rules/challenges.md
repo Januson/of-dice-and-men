@@ -34,6 +34,13 @@ Střet nastává, když se hráč pokouší o čin proti někomu, kdo se může 
 >
 > Hlídač si hodil na vnímání a dosáhl 2 úspěchů. Astrid tedy při plížení musí překonat úroveň výzvy 2.
 
+## Výzvy proti vlastnostem
+Během hry může nastat situace, kdy Postava potřebuje překonat překážku, u které nelze použít žádnou Dovednost. V takovém případě může Vypravěč po Hráči chtít takzvanou Výzvu proti vlastnosti.
+
+Výzva proti vlastnosti je hod na Zdatnost, Reflexy, Intelekt, nebo Vhled. Od běžné Výzvy se liší tím, že Hráč má na hod pouze svoje Základní kostky. Získá však na tento hod jednu Výhodu za každou úroveň testované Vlastnosti.
+
+> Barbar Kern čelí otravě. Pokousala ho jedovatá nestvůra a musí zjistit, zda se jeho tělo doháže jedu ubránit. Jeho Základní kostky jsou 4, a z toho má druhou úroveň Zdatnosti. Pro tuto výzvu má tedy čtyři kostky a dvě Výhody - jednu za každou úroveň Zdatnosti.
+
 ## Kostky
 
 Pro zdolání výzvy musí hráč dosáhnout alespoň o jeden úspěch více, něž jaká je úroveň výzvy. Lichá čísla značí neúspěchy, sudá značí úspěchy.
