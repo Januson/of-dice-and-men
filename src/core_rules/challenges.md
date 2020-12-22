@@ -28,7 +28,7 @@ Výzvy mohou mít jednu ze dvou forem; Činy nebo Střety.
 > Vypravěč určí, že otevření tohoto honosného zámku má úroveň výzvy 4.
 
 ## Střety
-Střet nastává, když se hráč pokouší o úkon proti něčemu, co se může bránit. Kupec si nenechá jen tak vybrat kapsu. Pokud si zloděje všimne, obratem přivolá stráže. Pronásledovaný nečeká až je dopaden, ale bude se snažit své pronásledovatele setřást. V případě střetu určuje úroveň výzvy počet úspěchů dosažený protivníkem.
+Střet nastává, když se hráč pokouší o čin proti někomu, kdo se může bránit. Kupec si nenechá jen tak vybrat kapsu. Pokud si zloděje všimne, obratem přivolá stráže. Pronásledovaný nečeká až je dopaden, ale bude se snažit své pronásledovatele setřást. V případě střetu určuje úroveň výzvy počet úspěchů dosažený protivníkem.
 
 > Astrid má proč přišla. Teď potřebuje se získaným lupem rychle do bezpečí svého úkrytu. K tomu však potřebuje tiše proklouznout kolem hlídače stojícího u brány.
 >
@@ -40,10 +40,10 @@ Pro zdolání výzvy musí hráč dosáhnout alespoň o jeden úspěch více, n�
 
 Pro každý čin, který se hráč chystá provést, vypravěč zhodnotí a posoudí jeho obtížnost. Poté mu přiřadí úroveň výzvy (CR) a tu se hráč pokusí překonat.
 
-Hráč má k dispozici tolik kostek, kolik je součet všech jeho vlastností.
-
 Počet kostek, které má hráč k dispozici ke zdolání výzvy určíte následovně: 
 - Základ skládající se ze součtu všech vlastností (Zdatnost, Reflexy, Inteligence a vhled)
 - Úroveň dovednosti aplikovatelné pro danou výzvu
+
+Maximum kostek, které lze v  jednom hodu použít je **deset**. Může se stát, že by hráč měl v některých situacích nárok na více než deset kostek. I v těchto případech platí maximum deseti kostek. Přebytečné kostky je však možné vyměnit za Výhody.
 
 > Astrid má jeden bod zdatnosti a dva body reflexů. Základ jejího hodu je tedy 3. Navíc má dovednost plížení na druhé úrovni. Astrid má tedy pro proklouznutí kolem hlídače k dispozici 5 kostek.
