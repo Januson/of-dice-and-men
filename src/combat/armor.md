@@ -1,6 +1,6 @@
 # Zbroj
 
-Prošívanice, kroužkové košile či železné pláty. Hrdinové se mohou chránit před zraněními různými způsoby. 
+Prošívanice, kroužkové košile, železné pláty či masivní štíty. Hrdinové se mohou chránit před zraněními různými způsoby. 
 
 ## Zbroje v boji
 Dobře obrněného protivníka je velmi obtížné zranit. Ke zranění protivníka v těžkém brnění je potřeba dosáhnout větší převahy, než jaká je zbroj zasaženého. Pokud je převaha nižší než úroveň zbroje, zasažený neutrpí žádné zranění. Finty však nejsou zbrojí nijak ovlivněny. 
@@ -40,7 +40,7 @@ Především však štít postavu chrání i před průraznými zbraněmi.
 Takovou zbraní bylo římské pilum, oštep, který legionáři vrhali proti svým nepřátelům. Při zásahu se pilum zabodlo do štítu a zpětné háčky bránily jeho vytažení. Štít se tak stal mnohem těžším a neohrabaným.
 
 Příklady překonání štítu:
- - Finta odzbrojení,
+ - Finta [odzbrojení](moves/disarm.md),
  - Finta zničení štítu,
  - Zbraně určené k ničení štítu.
 
