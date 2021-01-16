@@ -30,13 +30,6 @@ Především však štít postavu chrání i před průraznými zbraněmi.
  - Poskytuje krytí před střelbou.
  - Průrazné zbraně nesnižují zbroj poskytovanou štítem.
 
-### Shrnutí štítů
-| Druh         | Ochrana | Krytí        |
-| :--------    | :-----: | :---------   |
-| Malý štít    | 1       | Čtvrteční    |
-| Střední štít | 2       | Poloviční    |
-| Velký štít   | 3       | Tříčtvrteční |
-
 > Těžce zraněný Mordan popadl štít ležící na zemi. Zvýšil si tak svoji zbroj na 7.
 
 ## Překonání štítu
