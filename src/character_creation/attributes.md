@@ -1,4 +1,4 @@
-# Vlastnosti postavy
+# Vlastnosti
 Vlastnosti postav mohou být rozděleny do dvou skupin, které určují výhody nebo postihy. Ty postava obdrží, když čelí výzvám, tedy činům a sporům,  které během hry potká.
 
 Tyto skupiny jsou:
