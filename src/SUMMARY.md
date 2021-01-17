@@ -20,3 +20,4 @@
   - [Boj na dálku](combat/ranged.md)
   - [Slabiny](combat/weaknesses.md)
   - [Zbroj](combat/armor.md)
+- [Slovník](dictionary.md)
