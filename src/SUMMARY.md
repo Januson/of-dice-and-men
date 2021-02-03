@@ -32,6 +32,7 @@
   - [Slabiny](combat/weaknesses.md)
   - [Zbraně]()
   - [Zbroje](combat/armor.md)
+  - [Druhy poškození](combat/damage_types.md)
 - [Dovednosti]()
   - [Léčitelství]()
 - [Přednosti]()
