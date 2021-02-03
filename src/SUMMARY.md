@@ -5,7 +5,7 @@
   - [Výzvy](core_rules/challenges.md)
   - [Výhody](core_rules/advantages.md)
   - [Pomoc](core_rules/assistance.md)
-  - [Vnuknutí]()
+  - [Vnuknutí](core_rules/inspiration.md)
 - [Tvorba postavy](character_creation.md)
   - [Vlastnosti](character_creation/attributes.md)
   - [Zázemí]()
