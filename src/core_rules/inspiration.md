@@ -1,19 +1,18 @@
 # Vnuknutí
 
 Vnuknutí je pravidlo, pomocí kterého může vypravěč odměnit své
-hráče za věrné hraní jejich postav. Ať už podle osobnosti, 
-ideálů, pouta či vad. Použitím vnuknutí mohou čerpat sílu ze 
+hráče za věrné hraní jejich postav. Použitím vnuknutí mohou čerpat sílu ze 
 své minulosti či touhy zachránit rodnou vesnici a překonat tak
 i výzvy při kterých by za normálních okolností selhali.
 
 ## Získání vnuknutí
 
-Vypravěč může dát hráči vnuknutí z nejrůznějších důvodů. Obvykle
-je vypravěč udělí, když hráči přesvědčivě ztvární svoje postavy,
-ať už jejich přednosti nebo naopak vady.
+Vypravěč může dát hráči vnuknutí z nejrůznějších důvodů. Obvykle,
+když hráči přesvědčivě ztvární svoje postavy. Ať už jejich osobnost,
+ideály, vazby nebo naopak jejich vady.
 
 Hráči mohou mohou mít v jednu chvíli více, než jedno vnuknutí. 
-Vnuknutí mohou použít při první nástedující výzvě nebo si je 
+Vnuknutí mohou použít při první následující výzvě nebo si je 
 naopak šetřit, než nastane ta pravá chvíle.
 
 ## Použití vnuknutí
