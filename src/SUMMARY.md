@@ -33,6 +33,7 @@
   - [Zbraně]()
   - [Zbroje](combat/armor.md)
   - [Druhy poškození](combat/damage_types.md)
+  - [Stavy]()
 - [Dovednosti]()
   - [Léčitelství]()
 - [Přednosti]()
