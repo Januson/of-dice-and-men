@@ -13,6 +13,6 @@ Bojové hody se počítají následovně:
 > bojový hod spočítá následovně:
 > - 2K6 za dva stupňe zdatnosti a +1K6 za jeden stupeň inteligence.
 > - 2K6 za jeho dva stupně znalosti středních mečů. Ty mohou být 
-    > použity, jelikož třímá střední meč.
+    použity, jelikož třímá střední meč.
 > 
 > Galador má tedy celkový bojový hod 8K6.
