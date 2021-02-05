@@ -7,6 +7,7 @@
   - [Pomoc](core_rules/assistance.md)
   - [Vnuknutí](core_rules/inspiration.md)
 - [Tvorba postavy](character_creation.md)
+  - [Totožnost]()
   - [Vlastnosti](character_creation/attributes.md)
   - [Zázemí]()
   - [Dovednosti]()
