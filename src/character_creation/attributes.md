@@ -1,5 +1,8 @@
 # Vlastnosti
-Vlastnosti postav mohou být rozděleny do dvou skupin, které určují výhody nebo postihy. Ty postava obdrží, když čelí výzvám, tedy činům a sporům,  které během hry potká.
+
+Statistiky postav lze rozdělit do dvou kategorií. Tyto kategorie
+určují bonusy, které obdržíte při hodech proti výzvám, s nimiž
+se ve hře setkáte, ať už jde o zkoušky nebo střety.
 
 Tyto skupiny jsou:
 
@@ -7,35 +10,47 @@ Tyto skupiny jsou:
 + Dovednosti
 
 ## Vlastnosti
-Vlastnosti představují fyzické rysy dané postavy.
+
+Vlastnosti představují základní rysy dané postavy.
 
 Jedná se o:
 
 + Zdatnost
-+ Reflexy
-+ Inteligence
++ Hbitost
++ Bystrost
 + Vhled
 
-Tyto čtyři vlastnosti pokrývají všechny úkony, o které by se hráč mohl pokusit. Každá z těchto vlastností ovlivňuje hody při kontrole určitých dovednosti. Z pohledu boje však jeden bod inteligence a jeden bod reflexů dává stejnou výhodu jako dva body síly. To proto, že rychlý a chytrý nepřítel dovede být stejně nebezpečný jako silný nepřítel.
+Tyto čtyři vlastnosti pokrývají všechny úkony, o které by se hráč
+mohl pokusit. Každá z těchto vlastností ovlivňuje hody při kontrole
+určitých dovednosti. Z pohledu boje však jeden bod inteligence a
+jeden bod reflexů dává stejnou výhodu jako dva body síly. To proto,
+že rychlý a chytrý nepřítel dovede být stejně nebezpečný jako silný
+nepřítel.
 
-Mimo výhod k hodům při kontrole dovedností, každá vlastnost také poskytuje výhodu, která nesouvisí s hodem na dovednosti.
+Mimo výhod k hodům při kontrole dovedností, každá vlastnost také 
+poskytuje výhodu, která nesouvisí s hodem na dovednosti.
 
 ### Zdatnost
 Představuje tělesnou zdatnost. Jak je postava silná, odolná a podobně.
 
-Za každý stupeň zdatnosti, může postava snížit úroveň převahy, kterou proti ní má jiná postava, a to jednou za boj.
+Za každý stupeň zdatnosti, může postava snížit úroveň převahy, kterou
+proti ní dosáhl soupeř, a to jednou za boj.
 
-### Reflexy
-Představují tělesné instinkty. Jako rovnováhu, koordinaci, ale také třeba postřeh.
+### Hbitost
+Představují tělesné instinkty. Jako rovnováhu, koordinaci, ale také 
+třeba postřeh.
 
-Zvyšují iniciativu postavy.
+Zvyšuje rychlost postavy o jeden sáh za každý bod. Určuje pořadí iniciativy. 
 
-### Inteligence
+### Bystrost
 Představuje mysl postavy. Její uvažování hloubání.
 
-Za každý stupeň inteligence postava získá další 3 body dovedností, které si může rozdělit.
+Za každý stupeň bystrosti postava získá dalších 5 bodů dovedností,
+které si může rozdělit.
 
 ### Vhled
-Představuje součást mysli, který nesouvisí s přemýšlením samotným. Jde o instinkty, charisma, vcítění se a podobně.
+Představuje součást mysli, který nesouvisí s přemýšlením samotným. 
+Jde o instinkty, charisma, vcítění se a podobně.
 
-Za každý stupeň vhledu může postava přehodit neúspěšnou kostku, a to jednou za boj.
+Za každý stupeň vhledu může postava přehodit neúspěšnou kostku, a to
+jednou za boj.
