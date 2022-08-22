@@ -1,10 +1,18 @@
 # Překvapení
 
-Na začátku boje je potřeba určit, jestli je některá strana
-překvapená. To se může stát například u přepadení ze zálohy,
-padnutí do léčky, nebo třeba zrady.
+Skupina podlých lupičů se ukrývá v podrostu. Zazní znamení a oni se
+vrhnou na projíždějícího obchodníka. V těchto situacích získá jedna
+strana vůči druhé moment překvapení. To se může stát u přepadení ze
+zálohy, léčky, nebo třeba zrady.
 
-Hod na boj probíhá stejně jak je popsáno u běžného boje, s tím rozdílem,
+Pokud se ani jedna strana nesnaží tu druhou přepadnout, všimnou si sebe
+navzájem a střet pokračuje jako běžný souboj. V opačném případě hozhodne
+střet mezi kradmostí skrývající se strany a pozorností přepadené strany.
+Každý tvor, který si nevšimne hrozby, je na začátku souboje překvapený.
+
+Souboj probíhá stejně jak je popsáno u běžného souboje, s tím rozdílem,
 že překvapená strana nemůže v tomto kole využít svoji převahu ke zranění
-protivníka, může však použít fintu, kterou zná a jsou pro ni vhodné
-podmínky.
+protivníka, může však použít fintu.
+
+Jeden člen skupiny může být překvapený, i když ostatní členové jeho
+skupiny překvapení nejsou.
