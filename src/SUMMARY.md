@@ -21,7 +21,7 @@
     - [Intriky]()
     - [Kejkle]()
     - [Kradmost]()
-    - [Léčitelství]()
+    - [Léčitelství](character_creation/skills/healing.md)
     - [Lov]()
     - [Náboženství]()
     - [Mechanismy]()
