@@ -22,7 +22,7 @@
     - [Kejkle]()
     - [Kradmost]()
     - [Léčitelství](character_creation/skills/healing.md)
-    - [Lov]()
+    - [Lov](character_creation/skills/hunting.md)
     - [Náboženství]()
     - [Mechanismy]()
     - [Mystika]()
