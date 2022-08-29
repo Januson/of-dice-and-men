@@ -63,7 +63,7 @@
     - [Obrana](combat/actions/defense.md)
     - [Pohyb]()
     - [Pomoc]()
-    - [Útok]()
+    - [Útok](combat/actions/attack.md)
   - [Základy boje](combat/core_combat.md)
   - [Pohyb]()
   - [Útok]()
