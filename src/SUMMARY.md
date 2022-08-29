@@ -60,7 +60,7 @@
     - [Tvůj tah](combat/order/your_turn.md)
   - [Činy v boji](combat/actions.md)
     - [Improvizace]()
-    - [Obrana]()
+    - [Obrana](combat/actions/defense.md)
     - [Pohyb]()
     - [Pomoc]()
     - [Útok]()
