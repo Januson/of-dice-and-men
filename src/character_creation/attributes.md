@@ -22,8 +22,8 @@ Jedná se o:
 
 Tyto čtyři vlastnosti pokrývají všechny úkony, o které by se hráč
 mohl pokusit. Každá z těchto vlastností ovlivňuje hody při kontrole
-určitých dovednosti. Z pohledu boje však jeden bod inteligence a
-jeden bod reflexů dává stejnou výhodu jako dva body síly. To proto,
+určitých dovednosti. Z pohledu boje však jeden bod bystrosti a
+jeden bod hbitosti dává stejnou výhodu jako dva body zdatnosti. To proto,
 že rychlý a chytrý nepřítel dovede být stejně nebezpečný jako silný
 nepřítel.
 

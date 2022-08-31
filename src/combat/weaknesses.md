@@ -24,7 +24,7 @@ bylo normálně.
 Slabiny i odolnosti platí pouze na způsobené zranění. Na úroveň 
 vítěztví nemají vliv.
 
-> Karax, lovec příšer, vystopoval vlkodlaka a po lítém boji se mu
+> Malarak, lovec příšer, vystopoval vlkodlaka a po lítém boji se mu
 > porařilo způsobit vlkodlakovi způsobit smrtelné zranění.
 >
 > Pokud by toto zranění způsobila obyčejná ocelová zbraň,
