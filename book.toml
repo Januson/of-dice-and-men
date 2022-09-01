@@ -4,3 +4,7 @@ language = "cz"
 multilingual = false
 src = "src"
 title = "O kostkách a lidech"
+
+[output.html.fold]
+enable = true
+level = 0
