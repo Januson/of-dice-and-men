@@ -8,3 +8,7 @@ title = "O kostkách a lidech"
 [output.html.fold]
 enable = true
 level = 0
+
+[output.html.print]
+enable = true
+page-break = false
