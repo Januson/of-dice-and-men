@@ -28,7 +28,7 @@ jobs:
     docker:
       - image: circleci/rust:latest
     environment:
-      - TARGET_BRANCH: gh-pages
+      TARGET_BRANCH: gh-pages
     working_directory: ~/checkout
     steps:
       - checkout
