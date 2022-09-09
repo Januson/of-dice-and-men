@@ -20,6 +20,9 @@ jobs:
     docker:
       - image: januson/mdbook-builder:latest
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "5e:8a:1f:3c:89:17:7d:06:e6:14:03:df:30:50:20:90"
       - checkout
       - run:
           name: Version information
@@ -44,6 +47,9 @@ jobs:
       TARGET_BRANCH: gh-pages
     working_directory: ~/checkout
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "5e:8a:1f:3c:89:17:7d:06:e6:14:03:df:30:50:20:90"
       - checkout
       - run:
           name: Setup Git user
@@ -53,9 +59,6 @@ jobs:
           command: bash ./.circleci/nuke_branch.sh $TARGET_BRANCH
       - attach_workspace:
           at: .
-      - add_ssh_keys:
-          fingerprints:
-            - "24:1f:3b:e2:0d:49:4d:3b:46:98:21:69:6d:5d:8e:6f"
       - deploy:
           name: Deploy release
           command: bash ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
