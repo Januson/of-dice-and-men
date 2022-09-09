@@ -1,17 +1,30 @@
 version: 2.1
 
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
 jobs:
   build:
     docker:
-      - image: circleci/rust:latest
+      - image: januson/mdbook-builder:latest
     steps:
       - checkout
       - run:
           name: Version information
           command: rustc --version; cargo --version; rustup --version
-      - run:
-          name: Install mdbook
-          command: cargo install mdbook
       - run:
           name: Build with mdbook
           command: mdbook build
@@ -24,6 +37,7 @@ jobs:
             - "*"
             - ".circleci/*"
             - ".nojekyll"
+
   deploy:
     docker:
       - image: circleci/rust:latest
@@ -46,19 +60,3 @@ jobs:
       - deploy:
           name: Deploy release
           command: bash ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
-
-workflows:
-  version: 2
-  build:
-    jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - gh-pages
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
