@@ -53,12 +53,12 @@ jobs:
       - checkout
       - run:
           name: Setup Git user
-          command: bash ./.circleci/setup_user.sh $USER_EMAIL $USER_NAME
+          command: sh ./.circleci/setup_user.sh $USER_EMAIL $USER_NAME
       - run:
           name: Prepare release branch
-          command: bash ./.circleci/nuke_branch.sh $TARGET_BRANCH
+          command: sh ./.circleci/nuke_branch.sh $TARGET_BRANCH
       - attach_workspace:
           at: .
       - deploy:
           name: Deploy release
-          command: bash ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
+          command: sh ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
