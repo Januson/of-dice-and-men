@@ -6,3 +6,5 @@ jiným tvorem jsou zaskočeni oba.
 
 Stejné jako strčení. Vyžaduje alespoň jednu volnou ruku, nebo zbraň s
 vlastností hák (sekyra)
+
+- Potřebná převaha: 2

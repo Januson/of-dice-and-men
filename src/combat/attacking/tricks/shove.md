@@ -5,3 +5,5 @@ strčený tvor narazí na překážku, získá navíc stav zaskočený. Při sr�
 jiným tvorem jsou zaskočeni oba.
 
 Tvor strčený o 4 a více sáhů, který nenarazí na překážku, padá k zemi.
+
+- Potřebná převaha: 2
