@@ -6,6 +6,9 @@ odkryl a následoval zásek do jeho těla.
 Při způsobení zranění hraje roli velikost převahy útočníka. Čím větší
 převahy nad soupeřem dosáhne, tím závažnější zranění dokáže způsobit.
 
+- Potřebná převaha: 1
+- Vyšší převaha způsobí závažnější zranění
+
 <br/>
 
 | Závažnost        | Převaha |  Postih  |
