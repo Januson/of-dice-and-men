@@ -6,6 +6,7 @@ A simple Tabletop RPG system heavily focused on roleplay.
 
 ## Read it online
 The rules are currently hosted on Github Pages. You can [read it here].
+Only Czech version is available at the moment.
 
 [read it here]: https://januson.github.io/of-dice-and-men
 
