@@ -35,12 +35,12 @@ Především však štít postavu chrání i před průraznými zbraněmi.
 ## Překonání štítu
 Štíty poskytují svým nositelům značnou výhodu. Postavy se však mohou naučit řadu *fint*, s jejiž pomocí se protivníkova štítu mohou zbavit.
 
-Štít mohou vyrazit ze soupeřovy ruky. K tomu slouží *finta [odzbrojení](tricks/disarm.md)*. Štít lze také zničit. Toho lze docílit *fintou zničení štítu* nebo také zbraní k tomu určené.
+Štít mohou vyrazit ze soupeřovy ruky. K tomu slouží *finta [odzbrojení](attacking/tricks/disarm.md)*. Štít lze také zničit. Toho lze docílit *fintou zničení štítu* nebo také zbraní k tomu určené.
 
 Takovou zbraní bylo římské pilum, oštep, který legionáři vrhali proti svým nepřátelům. Při zásahu se pilum zabodlo do štítu a zpětné háčky bránily jeho vytažení. Štít se tak stal mnohem těžším a neohrabaným.
 
 Příklady překonání štítu:
- - Finta *[odzbrojení](tricks/disarm.md)*
+ - Finta *[odzbrojení](attacking/tricks/disarm.md)*
  - Finta *zničení štítu*
  - Zbraně určené k ničení štítu
 
