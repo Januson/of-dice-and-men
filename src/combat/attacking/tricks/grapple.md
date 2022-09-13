@@ -2,8 +2,8 @@
 
 Zápasící tvorové:
 - Potřebná převaha: 1
-- Mají nevýhodu při útoku na tvory s nimiž nezápasí.
-- Mohou se pohnou pouze o jeden sáh za kolo. Pohnou i se soupeřem.
+- Mají nevýhodu při útoku na tvory, s nimiž nezápasí.
+- Mohou se pohnout pouze o jeden sáh za kolo. Pohnou i se soupeřem.
 - Dlouhé zbraně mají nevýhodu
 
 ## Únik

@@ -28,7 +28,7 @@ převahy nad soupeřem dosáhne, tím závažnější zranění dokáže způsob
 
 ## Sčítání zranění
 
-Závažnost způsobený zranění se nesčítá. To znamená, že dvě střední zranění
+Závažnost způsobených zranění se nesčítá. To znamená, že dvě střední zranění
 se nepočítají jako jedno smrtelné zranění, ale každé zvlášť jako střední
 zranění.
 
@@ -41,5 +41,5 @@ Sčítá se však jimi způsobený postih. Zraněná postava tedy utrží postih
 
 ## Ochrana
 
-Utrženému zranění je možné zmírnit nebo se mu zcela vyhnout. Viz. sekce
+Utržené zranění je možné zmírnit nebo se mu zcela vyhnout. Viz sekce
 zdatnost, zbroj nebo vyčerpání
