@@ -1,0 +1,64 @@
+version: 2.1
+
+workflows:
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
+jobs:
+  build:
+    docker:
+      - image: januson/mdbook-builder:latest
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "5e:8a:1f:3c:89:17:7d:06:e6:14:03:df:30:50:20:90"
+      - checkout
+      - run:
+          name: Version information
+          command: rustc --version; cargo --version; rustup --version
+      - run:
+          name: Build with mdbook
+          command: mdbook build
+      - run:
+          name: Copy circleci config
+          command: cp -r .circleci ./book
+      - persist_to_workspace:
+          root: book
+          paths:
+            - "*"
+            - ".circleci/*"
+            - ".nojekyll"
+
+  deploy:
+    docker:
+      - image: januson/mdbook-builder:latest
+    environment:
+      TARGET_BRANCH: gh-pages
+    working_directory: ~/checkout
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "da:bc:4c:90:32:95:80:3f:6a:73:9c:e1:c8:f7:2d:d0"
+      - checkout
+      - run:
+          name: Setup Git user
+          command: sh ./.circleci/setup_user.sh $USER_EMAIL $USER_NAME
+      - run:
+          name: Prepare release branch
+          command: sh ./.circleci/nuke_branch.sh $TARGET_BRANCH
+      - attach_workspace:
+          at: .
+      - deploy:
+          name: Deploy release
+          command: sh ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
