@@ -65,13 +65,15 @@ jobs:
     environment:
       TARGET_BRANCH: gh-pages
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "da:bc:4c:90:32:95:80:3f:6a:73:9c:e1:c8:f7:2d:d0"
       - install_packages:
           packages: "git"
       - attach_workspace:
           at: .
+      - run:
+          name: Add GitHub to known_hosts
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: Setup Git user
           command: sh ./.circleci/setup_user.sh $USER_EMAIL $USER_NAME
