@@ -87,4 +87,6 @@ jobs:
             cp -r ../book/* .
       - run:
           name: Deploy release
-          command: sh ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
+          command: |
+            cd deploy
+            sh ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
