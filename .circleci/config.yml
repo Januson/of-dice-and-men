@@ -54,9 +54,10 @@ jobs:
           name: Build with mdbook
           command: mdbook build
       - persist_to_workspace:
-          root: book
+          root: /
           paths:
-            - .
+            - book
+            - .circleci
 
   deploy:
     executor: docker-executor
@@ -65,9 +66,8 @@ jobs:
     steps:
       - install_packages:
           packages: "git"
-      - checkout
       - attach_workspace:
-          at: book
+          at: .
       - run:
           name: Setup Git user
           command: sh ./.circleci/setup_user.sh $USER_EMAIL $USER_NAME
