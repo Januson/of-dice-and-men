@@ -89,4 +89,4 @@ jobs:
           name: Deploy release
           command: |
             cd deploy
-            sh ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
+            sh ../.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
