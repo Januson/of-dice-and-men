@@ -69,6 +69,9 @@ jobs:
           packages: "git"
       - attach_workspace:
           at: .
+      - add_ssh_keys:
+          fingerprints:
+            - "da:bc:4c:90:32:95:80:3f:6a:73:9c:e1:c8:f7:2d:d0"
       - run:
           name: Add GitHub to known_hosts
           command: |
