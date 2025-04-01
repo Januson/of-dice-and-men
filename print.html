@@ -1,18 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="cz" class="sidebar-visible no-js light">
+<html lang="cz" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>O kostkách a lidech</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
-        
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -26,25 +25,29 @@
         <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
     </head>
     <body>
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
-        </script>
-
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -57,50 +60,60 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
-            var theme;
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            html.classList.add("js");
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
+            sidebar_toggle.checked = sidebar === 'visible';
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Úvod</a></li><li class="chapter-item expanded "><a href="core_rules.html"><strong aria-hidden="true">2.</strong> Základní pravidla</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="core_rules/challenges.html"><strong aria-hidden="true">2.1.</strong> Výzvy</a></li><li class="chapter-item "><a href="core_rules/advantages.html"><strong aria-hidden="true">2.2.</strong> Výhody</a></li><li class="chapter-item "><a href="core_rules/assistance.html"><strong aria-hidden="true">2.3.</strong> Pomoc</a></li><li class="chapter-item "><a href="core_rules/inspiration.html"><strong aria-hidden="true">2.4.</strong> Vnuknutí</a></li></ol></li><li class="chapter-item expanded "><a href="character_creation.html"><strong aria-hidden="true">3.</strong> Tvorba postavy</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">3.1.</strong> Osobnost</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">3.1.1.</strong> Zázemí</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.1.2.</strong> Povaha</div></li></ol></li><li class="chapter-item "><a href="character_creation/attributes.html"><strong aria-hidden="true">3.2.</strong> Vlastnosti</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">3.2.1.</strong> Dovednosti</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.2.2.</strong> Schopnosti</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.2.3.</strong> Znalosti</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.2.4.</strong> Přednosti</div></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.</strong> Dovednosti</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">3.3.1.</strong> Boj beze zbraně</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.2.</strong> Boj z blízka</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.3.</strong> Intriky</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.4.</strong> Kejkle</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.5.</strong> Kradmost</div></li><li class="chapter-item "><a href="character_creation/skills/healing.html"><strong aria-hidden="true">3.3.6.</strong> Léčitelství</a></li><li class="chapter-item "><a href="character_creation/skills/hunting.html"><strong aria-hidden="true">3.3.7.</strong> Lov</a></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.8.</strong> Náboženství</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.9.</strong> Mechanismy</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.10.</strong> Mystika</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.11.</strong> Obchodování</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.12.</strong> Plavání</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.13.</strong> Pozornost</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.14.</strong> Předstírání</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.15.</strong> Přežití</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.16.</strong> Řečnění</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.17.</strong> Řízení</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.18.</strong> Střelba</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.19.</strong> Šplhání</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.20.</strong> Učenost</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.21.</strong> Umění</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.22.</strong> Vrh</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.23.</strong> Vztahy</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.3.24.</strong> Známosti</div></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.4.</strong> Řemesla</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">3.4.1.</strong> Alchymista</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.4.2.</strong> Bylinkář</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.4.3.</strong> Kovář</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.4.4.</strong> Runotepec</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.4.5.</strong> Tesař</div></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.5.</strong> Povolání</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">3.5.1.</strong> Mnich</div></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.6.</strong> Vybavení</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">3.6.1.</strong> Základní vybavení</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.6.2.</strong> Zbraně</div></li><li class="chapter-item "><div><strong aria-hidden="true">3.6.3.</strong> Zbroje</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="combat.html"><strong aria-hidden="true">4.</strong> Souboj</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="combat/order.html"><strong aria-hidden="true">4.1.</strong> Průběh souboje</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="combat/order/summary.html"><strong aria-hidden="true">4.1.1.</strong> Souboj krok za krokem</a></li><li class="chapter-item "><a href="combat/order/surprise.html"><strong aria-hidden="true">4.1.2.</strong> Překvapení</a></li><li class="chapter-item "><a href="combat/order/initiative.html"><strong aria-hidden="true">4.1.3.</strong> Iniciativa</a></li><li class="chapter-item "><a href="combat/order/your_turn.html"><strong aria-hidden="true">4.1.4.</strong> Tvůj tah</a></li></ol></li><li class="chapter-item "><a href="combat/actions.html"><strong aria-hidden="true">4.2.</strong> Činy v boji</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">4.2.1.</strong> Improvizace</div></li><li class="chapter-item "><a href="combat/actions/defense.html"><strong aria-hidden="true">4.2.2.</strong> Obrana</a></li><li class="chapter-item "><div><strong aria-hidden="true">4.2.3.</strong> Pohyb</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.2.4.</strong> Pomoc</div></li><li class="chapter-item "><a href="combat/actions/attack.html"><strong aria-hidden="true">4.2.5.</strong> Útok</a></li></ol></li><li class="chapter-item "><a href="combat/attacking.html"><strong aria-hidden="true">4.3.</strong> Útočení</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="combat/attacking/combat_rolls.html"><strong aria-hidden="true">4.3.1.</strong> Bojové hody</a></li><li class="chapter-item "><a href="combat/advantages.html"><strong aria-hidden="true">4.3.2.</strong> Výhody</a></li><li class="chapter-item "><a href="combat/attacking/dominance.html"><strong aria-hidden="true">4.3.3.</strong> Převaha</a></li><li class="chapter-item "><a href="combat/attacking/tricks.html"><strong aria-hidden="true">4.3.4.</strong> Finty</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="combat/attacking/tricks/disarm.html"><strong aria-hidden="true">4.3.4.1.</strong> Odzbrojení</a></li><li class="chapter-item "><a href="combat/attacking/tricks/knockout.html"><strong aria-hidden="true">4.3.4.2.</strong> Omráčení</a></li><li class="chapter-item "><a href="combat/attacking/tricks/shove.html"><strong aria-hidden="true">4.3.4.3.</strong> Strčení</a></li><li class="chapter-item "><a href="combat/attacking/tricks/knockdown.html"><strong aria-hidden="true">4.3.4.4.</strong> Sražení k zemi</a></li><li class="chapter-item "><a href="combat/attacking/tricks/disarm.html"><strong aria-hidden="true">4.3.4.5.</strong> Únik ze zápasu</a></li><li class="chapter-item "><a href="combat/attacking/tricks/grapple.html"><strong aria-hidden="true">4.3.4.6.</strong> Zápas</a></li><li class="chapter-item "><a href="combat/attacking/tricks/pull.html"><strong aria-hidden="true">4.3.4.7.</strong> Zatažení</a></li><li class="chapter-item "><a href="combat/attacking/tricks/pindown.html"><strong aria-hidden="true">4.3.4.8.</strong> Znehybnění</a></li><li class="chapter-item "><div><strong aria-hidden="true">4.3.4.9.</strong> Zničení štítu</div></li><li class="chapter-item "><a href="combat/attacking/tricks/kill.html"><strong aria-hidden="true">4.3.4.10.</strong> Zabití</a></li><li class="chapter-item "><a href="combat/attacking/tricks/stagger.html"><strong aria-hidden="true">4.3.4.11.</strong> Zaskočení</a></li><li class="chapter-item "><a href="combat/attacking/tricks/mutilate.html"><strong aria-hidden="true">4.3.4.12.</strong> Zmrzačení</a></li><li class="chapter-item "><a href="combat/attacking/tricks/injure.html"><strong aria-hidden="true">4.3.4.13.</strong> Zranění</a></li></ol></li><li class="chapter-item "><a href="combat/attacking/fighting_groups.html"><strong aria-hidden="true">4.3.5.</strong> Skupinový boj</a></li><li class="chapter-item "><a href="combat/attacking/ranged.html"><strong aria-hidden="true">4.3.6.</strong> Boj na dálku</a></li><li class="chapter-item "><div><strong aria-hidden="true">4.3.7.</strong> Boj v sedle</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.3.8.</strong> Boj pod vodou</div></li><li class="chapter-item "><a href="combat/weaknesses.html"><strong aria-hidden="true">4.3.9.</strong> Slabiny</a></li><li class="chapter-item "><div><strong aria-hidden="true">4.3.10.</strong> Zbraně</div></li><li class="chapter-item "><a href="combat/armor.html"><strong aria-hidden="true">4.3.11.</strong> Zbroje</a></li><li class="chapter-item "><a href="combat/damage_types.html"><strong aria-hidden="true">4.3.12.</strong> Druhy poškození</a></li><li class="chapter-item "><div><strong aria-hidden="true">4.3.13.</strong> Stavy</div></li></ol></li><li class="chapter-item "><a href="combat/movement.html"><strong aria-hidden="true">4.4.</strong> Pohyb</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="combat/movement/standard_movement.html"><strong aria-hidden="true">4.4.1.</strong> Běžný pohyb</a></li><li class="chapter-item "><a href="combat/movement/difficult_terrain.html"><strong aria-hidden="true">4.4.2.</strong> Náročný terén</a></li><li class="chapter-item "><a href="combat/movement/dangerous_terrain.html"><strong aria-hidden="true">4.4.3.</strong> Nebezpečný terén</a></li><li class="chapter-item "><a href="combat/movement/guarded_area.html"><strong aria-hidden="true">4.4.4.</strong> Střežená oblast</a></li><li class="chapter-item "><div><strong aria-hidden="true">4.4.5.</strong> Povalení</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.4.6.</strong> Pohyb kolem ostatních tvorů</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.4.7.</strong> Létání</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.4.8.</strong> Velikost tvorů</div></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">4.5.</strong> Zotavení</div></li><li class="chapter-item "><div><strong aria-hidden="true">4.6.</strong> Únava</div></li></ol></li><li class="chapter-item expanded "><a href="dictionary.html"><strong aria-hidden="true">5.</strong> Slovník</a></li></ol>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -133,7 +146,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -311,7 +324,7 @@ danou výzvu překoná získá postava, které pomoc poskytuje ke svému
 hodu výhodu.</p>
 <p>Pomoc je však dvousečná zbraň a tak může ve zdolání úkonu nejen
 pomoci, ale i uškodit. Pokud postava nezdolá výzvu pro poskytnutí
-pomoci, tak za každý chybějící úspěch získá postava, které je 
+pomoci, tak za každý chybějící úspěch získá postava, které je
 pomoc poskytnuta ke svému hodu nevýhodu.</p>
 <blockquote>
 <p>Nalaar, místní ranhojič, se snaží zachránit krvácejícího
@@ -324,7 +337,7 @@ během ošetření čeledína 1 výhodu.</p>
 <h1 id="vnuknutí"><a class="header" href="#vnuknutí">Vnuknutí</a></h1>
 <p>Vnuknutí je pravidlo, pomocí kterého může vypravěč odměnit své
 hráče za věrné hraní jejich postav. Použitím vnuknutí mohou
-čerpat sílu ze své minulosti či touhy zachránit rodnou vesnici a 
+čerpat sílu ze své minulosti či touhy zachránit rodnou vesnici a
 překonat tak i výzvy, při kterých by za normálních okolností
 selhali.</p>
 <h2 id="získání-vnuknutí"><a class="header" href="#získání-vnuknutí">Získání vnuknutí</a></h2>
@@ -369,22 +382,22 @@ určitých dovednosti. Z pohledu boje však jeden bod bystrosti a
 jeden bod hbitosti dává stejnou výhodu jako dva body zdatnosti. To proto,
 že rychlý a chytrý nepřítel dovede být stejně nebezpečný jako silný
 nepřítel.</p>
-<p>Mimo výhod k hodům při kontrole dovedností, každá vlastnost také 
+<p>Mimo výhod k hodům při kontrole dovedností, každá vlastnost také
 poskytuje výhodu, která nesouvisí s hodem na dovednosti.</p>
 <h3 id="zdatnost"><a class="header" href="#zdatnost">Zdatnost</a></h3>
 <p>Představuje tělesnou zdatnost. Jak je postava silná, odolná a podobně.</p>
 <p>Za každý stupeň zdatnosti, může postava snížit úroveň převahy, kterou
 proti ní dosáhl soupeř, a to jednou za boj.</p>
 <h3 id="hbitost"><a class="header" href="#hbitost">Hbitost</a></h3>
-<p>Představují tělesné instinkty. Jako rovnováhu, koordinaci, ale také 
+<p>Představují tělesné instinkty. Jako rovnováhu, koordinaci, ale také
 třeba postřeh.</p>
-<p>Zvyšuje rychlost postavy o jeden sáh za každý bod. Určuje pořadí iniciativy. </p>
+<p>Zvyšuje rychlost postavy o jeden sáh za každý bod. Určuje pořadí iniciativy.</p>
 <h3 id="bystrost"><a class="header" href="#bystrost">Bystrost</a></h3>
 <p>Představuje mysl postavy. Její uvažování hloubání.</p>
 <p>Za každý stupeň bystrosti postava získá dalších 5 bodů dovedností,
 které si může rozdělit.</p>
 <h3 id="vhled"><a class="header" href="#vhled">Vhled</a></h3>
-<p>Představuje součást mysli, který nesouvisí s přemýšlením samotným. 
+<p>Představuje součást mysli, který nesouvisí s přemýšlením samotným.
 Jde o instinkty, charisma, vcítění se a podobně.</p>
 <p>Za každý stupeň vhledu může postava přehodit neúspěšnou kostku, a to
 jednou za boj.</p>
@@ -435,21 +448,21 @@ jednou za boj.</p>
 <h1 id="souboj"><a class="header" href="#souboj">Souboj</a></h1>
 <p>Šípy sviští vzduchem. Bitevním polem se nese řinčení zbraní
 narážejících do štítové hradby. Ozývají se hrůzostrašné výkřiky
-nebožáků, jimž se obludné drápy zasekly do masa. Bojiště zalil 
+nebožáků, jimž se obludné drápy zasekly do masa. Bojiště zalil
 oslnivý záblesk světla, když čaroděj spálil další příšeru na prach.
 Kovový pach krve prořezává jen smrad další vlny odporných nestvůr.</p>
 <p>Tato kapitola obsahuje pravidla, potřebná aby vaše postavy mohly čelit
 nestvůrám a dalším nepřátelům v boji. Ať už v krátkých šarvátkách nebo
 vleklých konfliktech, v temných sklepeních či na bitevním poli. V této
-kapitole oslovujeme &quot;tebe&quot; jako hráče či vypravěče. Vypravěč ovládá
+kapitole oslovujeme "tebe" jako hráče či vypravěče. Vypravěč ovládá
 všechny nestvůry a cizí postavy v boji a každý hráč ovládá svého
-dobrodruha. &quot;Ty&quot; může také znamenat postavu či nestvůru, za kterou hraješ.</p>
+dobrodruha. "Ty" může také znamenat postavu či nestvůru, za kterou hraješ.</p>
 <h1 id="průběh-souboje"><a class="header" href="#průběh-souboje">Průběh souboje</a></h1>
 <p>Běžný souboj je střetem mezi dvěma stranami - smršt seků, úderů, úhybů
 a seslaných kouzel. Hra uspořádává bezvládí boje do cyklů kol a tahů.
 Každé kolo představuje zhruba 6 sekund v herním světě. V průběhu kola
 provede každý bojující tah. Pořadí tahů se určuje na začátku souboje,
-kdy si každý bojující hodí na pohotovost. Po tom, co každý provede svůj tah, 
+kdy si každý bojující hodí na pohotovost. Po tom, co každý provede svůj tah,
 pokračuje souboj do dalšího kola, dokud jedna ze stran neporazí tu druhou.</p>
 <h1 id="souboj-krok-za-krokem"><a class="header" href="#souboj-krok-za-krokem">Souboj krok za krokem</a></h1>
 <ol>
@@ -492,7 +505,7 @@ skupiny překvapení nejsou.</p>
 <h1 id="pohotovost"><a class="header" href="#pohotovost">Pohotovost</a></h1>
 <p>Před začátkem samotného boje je potřeba určit pořadí, v jakém
 budou postavy bojovat. K tomuto účelu slouží pohotovost.</p>
-<p>Pro určení pohotovosti si každý účastník boje hodí na hbitost. Tedy 
+<p>Pro určení pohotovosti si každý účastník boje hodí na hbitost. Tedy
 základní hod plus výhoda za každý bod hbitosti postavy. Postava se
 třemi body hbitosti tedy bude mít hod na pohotovost <strong>3k6+3</strong>, zatímco
 postava se třemi body zdatnosti bude mít hod na pohotovost <strong>3k6</strong>.</p>
@@ -516,7 +529,7 @@ počtu úspěchů. Postava s hodem <strong>4k6</strong> tedy může dosáhnout p
 </blockquote>
 <h1 id="tvůj-tah"><a class="header" href="#tvůj-tah">Tvůj tah</a></h1>
 <p>Ve svém tahu se můžeš přemístit, mluvit, bojovat či jinak jednat.
-Nejběžnější činnosti, které můžeš dělat, jsou popsané v části &quot;Činy v boji&quot;
+Nejběžnější činnosti, které můžeš dělat, jsou popsané v části "Činy v boji"
 dále v této kapitole.</p>
 <p>Ve svém tahu se můžeš vzdát pohybu, provedení činu nebo se tahu úplně
 vzdát. Pokud se nemůžeš rozhodnout, jak naložit se svým tahem, zvaž
@@ -596,16 +609,16 @@ bojující mohou v souboji pokusit.</p>
 nebo na dálku a zaútočit na svůj cíl. Na rozdíl od jiných pravidel,
 v těchto si útočící nevybírá cíl přímo. Zapojuje se do boje se všemi
 nepřáteli v dosahu. Koho z nich dokázal přemoci pak určuje získaná
-převaha. Viz části &quot;Útočení&quot; a &quot;Převaha&quot;, kde jsou pravidla pro útoky.</p>
+převaha. Viz části "Útočení" a "Převaha", kde jsou pravidla pro útoky.</p>
 <h1 id="Útočení"><a class="header" href="#Útočení">Útočení</a></h1>
 <h1 id="bojové-hody"><a class="header" href="#bojové-hody">Bojové hody</a></h1>
 <p>Když jde hrdinovi o život, využije každou drobnost, jen aby si
-zajistil vítězství. Proto každá vlastnost (zdatnost, hbitos, 
+zajistil vítězství. Proto každá vlastnost (zdatnost, hbitos,
 bystrost i vhled) poskytuje výhodu při bojových hodech.</p>
 <p>Bojové hody se počítají následovně:</p>
 <ul>
 <li>Součet všech vlastností (zdatnost, hbitost, bystrost, vhled).</li>
-<li>1K6 za každou v boji použitelnou znalost (Související s tím, co 
+<li>1K6 za každou v boji použitelnou znalost (Související s tím, co
 postava používá nebo dělá).</li>
 </ul>
 <blockquote>
@@ -613,7 +626,7 @@ postava používá nebo dělá).</li>
 bojový hod spočítá následovně:</p>
 <ul>
 <li><strong>2K6</strong> za dva stupňe zdatnosti a <strong>+1K6</strong> za jeden stupeň bystrosti.</li>
-<li><strong>3K6</strong> za jeho tři stupně znalosti boje z blízka. Ty mohou být 
+<li><strong>3K6</strong> za jeho tři stupně znalosti boje z blízka. Ty mohou být
 použity, jelikož třímá meč.</li>
 </ul>
 <p>Galador má tedy celkový bojový hod <strong>6K6</strong>.</p>
@@ -637,7 +650,7 @@ použity, jelikož třímá meč.</li>
 <h3 id="překvapený"><a class="header" href="#překvapený">Překvapený</a></h3>
 <p>Nevýhoda -2 způsobená pomocí bojové finty jinou postavou. Písek hozený do tváře, strčení.</p>
 <h3 id="přepadení"><a class="header" href="#přepadení">Přepadení</a></h3>
-<p>Přepadená postava se nebrání. Namísto obrany vypravěč určí úroveň výzvy (CL) kterou útočník musí překonat. Například: napadení vojáka zezadu vyžaduje hod na plížení. Vypravěč určí CL a útočník hodí na úspěch plížení. Hodnota, o kterou útočník přehodil CL přepadeného je úroveň vítěztví, které útočník dosáhl. Přepadení ignoruje zbroj. Pokud útočník neuspěje střet pokračuje jako normální boj. </p>
+<p>Přepadená postava se nebrání. Namísto obrany vypravěč určí úroveň výzvy (CL) kterou útočník musí překonat. Například: napadení vojáka zezadu vyžaduje hod na plížení. Vypravěč určí CL a útočník hodí na úspěch plížení. Hodnota, o kterou útočník přehodil CL přepadeného je úroveň vítěztví, které útočník dosáhl. Přepadení ignoruje zbroj. Pokud útočník neuspěje střet pokračuje jako normální boj.</p>
 <h3 id="zranitelný"><a class="header" href="#zranitelný">Zranitelný</a></h3>
 <p>Postavy ležící či jinak sražené k zemi mají 4 nevýhody. Postih trvá, než se postava zvedne a trvá i během zvedání se.</p>
 <h3 id="mimo-dostřel"><a class="header" href="#mimo-dostřel">Mimo dostřel</a></h3>
@@ -689,7 +702,7 @@ použity, jelikož třímá meč.</li>
 <h3 id="zranění"><a class="header" href="#zranění">Zranění</a></h3>
 <p>Způsobená zranění se nesčítají ve smrtelnosti, ale sčítá se jimi obdržený postih. To znamená, že 2 střední zranění nezpůsobí vážné zranění, ale postava obdrží postih -4K6 (2 * 2K6).</p>
 <blockquote>
-<p>Duncan bojuje se skřetem. Začínal boj se 7k6. V přechozích kolech ale utržil lehké a střední zranění. Jeho útok je tedy 4k6(7k6 - (1k6 + 2k6)) </p>
+<p>Duncan bojuje se skřetem. Začínal boj se 7k6. V přechozích kolech ale utržil lehké a střední zranění. Jeho útok je tedy 4k6(7k6 - (1k6 + 2k6))</p>
 </blockquote>
 <h1 id="finty"><a class="header" href="#finty">Finty</a></h1>
 <p>Kdykoliv jeden bojující nad druhým získá v souboji převahu, může tuto
@@ -710,7 +723,7 @@ zbývající převahy.</p>
 <p>Astrid bojuje se strážným. V tomto kole nad ním dosáhla převahy 4.
 Potřebuje zmizet, než ji doženou další strážní. Rozhodne se proto využít
 svoji převahu k odzbrojení strážného.</p>
-<p>Odzbrojení spotřebuje 3 ze 4 bodů převahy, jíž dosáhla. Využije proto 
+<p>Odzbrojení spotřebuje 3 ze 4 bodů převahy, jíž dosáhla. Využije proto
 zbývající převahu, aby halapartnu odhodila 3 sáhy stranou a dá se znovu
 na útěk.</p>
 </blockquote>
@@ -732,26 +745,6 @@ jiným tvorem jsou zaskočeni oba.</p>
 <ul>
 <li>Potřebná převaha: 2</li>
 </ul>
-<h1 id="odzbrojení-1"><a class="header" href="#odzbrojení-1">Odzbrojení</a></h1>
-<p>Odzbrojení patří mezi nejrychlejší a nejúčinnější způsoby pro zneškodnění
-protivníka. Ať už jde o pohodový rukolam, přesný úder do ruky či vyražení
-zbraně z ruky hrubou silou.</p>
-<p>Protivník je připraven o zbraň nebo jiný předmět, který třímá. Útočník si
-může zbraň nechat, nebo ji odhodit o 2 sáhy + 1 další sáh za každý bod
-zbývající převahy.</p>
-<ul>
-<li>Potřebná převaha: 3</li>
-<li>Připraví protivníka o zbraň</li>
-<li>Může zbraň odhodit</li>
-</ul>
-<blockquote>
-<p>Astrid bojuje se strážným. V tomto kole nad ním dosáhla převahy 4.
-Potřebuje zmizet, než ji doženou další strážní. Rozhodne se proto využít
-svoji převahu k odzbrojení strážného.</p>
-<p>Odzbrojení spotřebuje 3 ze 4 bodů převahy, jíž dosáhla. Využije proto 
-zbývající převahu, aby halapartnu odhodila 3 sáhy stranou a dá se znovu
-na útěk.</p>
-</blockquote>
 <h1 id="chycení"><a class="header" href="#chycení">Chycení</a></h1>
 <p>Zápasící tvorové:</p>
 <ul>
@@ -806,7 +799,7 @@ dvě nevýhody. Písek hozený do očí, strčení.</p>
 <li>Useknutí ruky nebo nohy</li>
 <li>Rozdrcení kloubu</li>
 <li>Prostřelení kolene</li>
-<li>Utržení výbuchem nebo kouzlem </li>
+<li>Utržení výbuchem nebo kouzlem</li>
 </ul>
 <blockquote>
 <p>Viktor bojuje s oživlou mrtvolou. Je pomalá a nemotorná. Viktor jí bez
@@ -875,7 +868,7 @@ přemohl a způsobil mu lehké zranění.</p>
 zranění) hodí znovu 4. Oba skřeti v tomto kole hodí jedinný úspěch.
 Malarak oběma způsobí vážné zranění. Protože vážné zranění postavu
 zabije, nebude-li v blízké budoucnosti ošetřeno, dají se skřeti na útěk a
-zanechají za sebou stopu krve. </p>
+zanechají za sebou stopu krve.</p>
 </blockquote>
 <h1 id="boj-na-dálku"><a class="header" href="#boj-na-dálku">Boj na dálku</a></h1>
 <p>Boj na dálku funguje trochu jinak než boj na blízku. Na začátku
@@ -893,11 +886,11 @@ pokouší. Rozlišujeme čtyři druhy vzdáleností.</p>
 <li>Přilehlá vzdálenost - Cíl se nachází v bezprostřední blízkosti
 střelce. Pro zasažení tohoto cíle stačí jedinné vítězví.
 Střelec je však na dosah útoku z blízky. Pokud je cíl schopen
-boje, má střelec pro tento útok 2 nevýhody. </li>
+boje, má střelec pro tento útok 2 nevýhody.</li>
 <li>Krátká vzdálenost (5 až 10 m) - Pro zásah střelec musí
 dosáhnout alespoň dvou vítěztví.</li>
 <li>Střední vzdálenost (10 až 50 m) - Pro zásah střelec musí
-dosáhnout alespoň tří vítěztví. </li>
+dosáhnout alespoň tří vítěztví.</li>
 <li>Dlouhá vzdálenost (50 až 100 m) - Pro zásah střelec musí
 dosáhnout alespoň čtyř vítěztví.</li>
 </ul>
@@ -910,18 +903,18 @@ dlouhý luk má dlouhý dostřel.</p>
 <p>Zdi, porost, jiní tvorové a mnohé další překážky mohou stát mezi
 střelcem a jeho cílem. Čím větší krytí, tím obtížnější je daný
 cíl zasáhnout. Podle stupně krytí může vypravěč upravit úroveň
-výzvy pro zasažení cíle následujícím způsobem. </p>
+výzvy pro zasažení cíle následujícím způsobem.</p>
 <ul>
 <li>Nekrytí - Nekrytý cíl je střelcem jasně viditelný a nic tak
 nebrání jeho zasažení. Úroveň výzvy se nemění.</li>
 <li>Poloviční krytí - Cíl se skrývá za zdí, stromem či jiným
 tvorem. Přesto je stále alespoň polovina cíle viditelná.
-Úroveň výzvy se zvyší o 2. </li>
+Úroveň výzvy se zvyší o 2.</li>
 <li>Většinové krytí - Cíl je ukrytý a střelec vidí pouze jeho malou
 část. Taková překážka může být mohutný strom, okno či hradní
 střílna. Úroveň výzvy se zvyší o 4.</li>
 <li>Úplné krytí - Cíl je před střelcem plně ukrytý a tak není možné
-jej zacílit. </li>
+jej zacílit.</li>
 </ul>
 <h2 id="pohyblivý-cíl"><a class="header" href="#pohyblivý-cíl">Pohyblivý cíl</a></h2>
 <p>Ať už bežce, jezdce na koni či letícího ptáka. Zasáhnout
@@ -949,36 +942,36 @@ snažší, než zasáhnout vrabce.</p>
 </div>
 <p>* Cíl s krytím není považován za přilehlý.</p>
 <h1 id="slabiny-a-odolnosti"><a class="header" href="#slabiny-a-odolnosti">Slabiny a odolnosti</a></h1>
-<p>Některé bytosti jsou od přírody odolnější proti některým druhům 
+<p>Některé bytosti jsou od přírody odolnější proti některým druhům
 zranění. Ať už jde o zplozence pekel, odolné vůči plamenům, či
-mohutného zlobra, jehož tlustá kůže odolá bězným, chladným 
-zbraním, tyto bytosti je nadmíru těžké tímto způsobem zranit. 
-Jiné bytosti napúal mohou být vůči určitým druhům zranění 
+mohutného zlobra, jehož tlustá kůže odolá bězným, chladným
+zbraním, tyto bytosti je nadmíru těžké tímto způsobem zranit.
+Jiné bytosti napúal mohou být vůči určitým druhům zranění
 náchylnější. Jako nemrtví vůči posvěceným zbraním.</p>
 <h2 id="odolnosti"><a class="header" href="#odolnosti">Odolnosti</a></h2>
 <p>Pokud bytost utrží zranění vůči němuž je odolná, zranění jí
-způsobené je o úroveň nižší, než by tomu bylo za běžných 
-okolností. Pokud by bytost utržila střední zranění, bude jí 
-způsobeno pouze lehké zranění. A pokud by jí bylo způsobeno 
+způsobené je o úroveň nižší, než by tomu bylo za běžných
+okolností. Pokud by bytost utržila střední zranění, bude jí
+způsobeno pouze lehké zranění. A pokud by jí bylo způsobeno
 zranění lehké, pak mu odolá úplně.</p>
 <h2 id="slabiny"><a class="header" href="#slabiny">Slabiny</a></h2>
-<p>Stejně tak pokud je bytosti způsobeno zranění, vůči němuž je 
+<p>Stejně tak pokud je bytosti způsobeno zranění, vůči němuž je
 zranitelná, pak je způsobené zranění o úroveň vyšší, než by tomu
 bylo normálně.</p>
-<p>Slabiny i odolnosti platí pouze na způsobené zranění. Na úroveň 
+<p>Slabiny i odolnosti platí pouze na způsobené zranění. Na úroveň
 vítěztví nemají vliv.</p>
 <blockquote>
 <p>Malarak, lovec příšer, vystopoval vlkodlaka a po lítém boji se mu
 porařilo způsobit vlkodlakovi způsobit smrtelné zranění.</p>
 <p>Pokud by toto zranění způsobila obyčejná ocelová zbraň,
-vlkodlak by utržil pouze těžké zranění. Karax však přišel 
-připraven a úder mu zasadil stříbrným mečem. Vlkodlak, jehož 
+vlkodlak by utržil pouze těžké zranění. Karax však přišel
+připraven a úder mu zasadil stříbrným mečem. Vlkodlak, jehož
 slabina je stříbro, útoku podlehl a skácel se k zemi.</p>
 </blockquote>
 <h1 id="zbroj"><a class="header" href="#zbroj">Zbroj</a></h1>
-<p>Prošívanice, kroužkové košile či železné štíty. Hrdinové se mohou chránit před zraněními různými způsoby. </p>
+<p>Prošívanice, kroužkové košile či železné štíty. Hrdinové se mohou chránit před zraněními různými způsoby.</p>
 <h2 id="zbroje-v-boji"><a class="header" href="#zbroje-v-boji">Zbroje v boji</a></h2>
-<p>Dobře obrněného protivníka je velmi obtížné zranit. Ke zranění protivníka v těžkém brnění je potřeba dosáhnout větší <em>převahy</em>, než jaká je <em>úroveň zbroje</em> zasaženého. Pokud je <em>převaha</em> nižší než <em>úroveň zbroje</em>, zasažený neutrpí žádné zranění. <em>Finty</em> však nejsou zbrojí nijak ovlivněny. </p>
+<p>Dobře obrněného protivníka je velmi obtížné zranit. Ke zranění protivníka v těžkém brnění je potřeba dosáhnout větší <em>převahy</em>, než jaká je <em>úroveň zbroje</em> zasaženého. Pokud je <em>převaha</em> nižší než <em>úroveň zbroje</em>, zasažený neutrpí žádné zranění. <em>Finty</em> však nejsou zbrojí nijak ovlivněny.</p>
 <p>Úroveň zbroje:</p>
 <ul>
 <li>Zvyšuje <em>převahu</em> potřebnou pro způsobení zranění</li>
@@ -988,7 +981,7 @@ slabina je stříbro, útoku podlehl a skácel se k zemi.</p>
 <p>Válečník Mordan byl zasažen. Jeho soupeř Kaval má převahu 3 a chtěl by tak mordanovi způsobit těžké zranění. Mordan však má úroveň zbroje 5 a tak se Kavalův útok jen neškodně odrazil od Mordanova brnění.</p>
 </blockquote>
 <h2 id="překonání-zbroje"><a class="header" href="#překonání-zbroje">Překonání zbroje</a></h2>
-<p>I hodně obrněné postavy však mají slabiny. Jednou takovou slabinou jsou průrazné zbraně. Zbraně s vysokou <em>průrazností</em> jsou z pravidla tupé a drtivé. </p>
+<p>I hodně obrněné postavy však mají slabiny. Jednou takovou slabinou jsou průrazné zbraně. Zbraně s vysokou <em>průrazností</em> jsou z pravidla tupé a drtivé.</p>
 <p><em>Průraznost</em> zbraně značí, jak velkou část zbroje je daná zbraň schopna překonat.</p>
 <blockquote>
 <p>Kavalovi přiběhl na pomoc Predrag a nad Mordanem má také převahu 3. Predrag však útočí velkým válečným kladivem, které má průraznost 6. Jeho útok tak plně překoná Mordanovu zbroj a způsobí mu těžké zranění.</p>
@@ -1020,55 +1013,82 @@ slabina je stříbro, útoku podlehl a skácel se k zemi.</p>
 <p>Kaval má nad Mordanem převahu 5, ale ani tak by se mu ho nepodařilo dorazit. Mordan však nemá štít připoutaný k ruce, a tak Kaval použije odzbrojení a vyrazí mu štít z ruky.</p>
 </blockquote>
 <h1 id="druhy-poškození"><a class="header" href="#druhy-poškození">Druhy poškození</a></h1>
+<h2 id="bleskové"><a class="header" href="#bleskové">Bleskové</a></h2>
+<ul>
+<li>Zmáčený cíl se počítá jako zranitelný pokud nemá odolnost</li>
+</ul>
 <h2 id="kyselinové"><a class="header" href="#kyselinové">Kyselinové</a></h2>
 <p>Kyselinové poškození ničí zbroj zasaženého. Pokud zbroj ochrání
 postavu před kyselinovým zraněním, je trvale poškozena. Ochrana
 této zbroje se sníží o úroveň zranění, před kterým postavu ochránila.</p>
 <blockquote>
-<p>Duncan bojuje s kyselinu plivajícím červem. Červ zaútočil s 
+<p>Duncan bojuje s kyselinu plivajícím červem. Červ zaútočil s
 převahou 3, tedy by Duncanovi způsobil těžké zranění. Duncan má
-ochranu zbroje 4, proto neutrpí žádné zranění. Kyselina však 
+ochranu zbroje 4, proto neutrpí žádné zranění. Kyselina však
 zbroj poškodila, a tak se ochrana jeho zbroje snížila na 1.</p>
 </blockquote>
+<h2 id="mrazivé"><a class="header" href="#mrazivé">Mrazivé</a></h2>
+<ul>
+<li>Zmáčený cíl se počátá jako zranitelný pokud nemá odolnost</li>
+</ul>
+<h2 id="ohnivé"><a class="header" href="#ohnivé">Ohnivé</a></h2>
+<ul>
+<li>Zmáčený cíl se počítá jako odolný, ale pouze při prvním zásahu</li>
+</ul>
 <h1 id="pohyb"><a class="header" href="#pohyb">Pohyb</a></h1>
 <p>Bojovníci jsou během souboje v neustálém pohybu. Navzájem kolem sebe
 krouží a snaží se jeden druhého zaskočit. Lučištník ustupuje na vyvýšené
 místo, zatím co jeho cíl kličkuje, aby se vyhnul vystřeleným šípům.</p>
 <h1 id="běžný-pohyb"><a class="header" href="#běžný-pohyb">Běžný pohyb</a></h1>
-<p>Ve svém tahu se můžeš pohnout až do vzdálenosti dle tvé rychlosti. Svou
-rychlost můžeš využít celou nebo se nemusíš pohnout vůbec. Rychlejší
-tvorové jsou schopni urazit delší vzdálenost.</p>
+<p>Ve svém tahu se můžeš pohnout až do vzdálenosti dle tvé rychlosti. Každý
+bod rychlosti se rovná jednomu sáhu pohybu. Svůj pohyb můžeš využít celý
+nebo se nemusíš pohnout vůbec. Rychlejší tvorové jsou schopni urazit delší
+vzdálenost.</p>
+<p>Při šplhání, plavání, nebo plazení vyžaduje každý uražený sáh jeden bod
+rychlosti navíc. Vyšplhat jeden sáh tedy vyžaduje 2 body rychlosti. Tento
+pohyb vyžaduje jeden další bod rychlosti pokud se pohybuješ přes náročný
+terén.</p>
 <blockquote>
 <p>Rytíř Duncan čelí harpii. Duncan má rychlost 5. V souboji je tedy
 schopný ujít 5 sáhů.</p>
 <p>Harpie je létající nestvůra a čelit takové nestvůře na otevřeném poli
 je sebevražda. Rozhodne se tedy pohnout 4 sáhy mezi nedaleké stromy,
-kde pro něj bude souboj s létající nestvůrou výhodnější. Poslední sáh 
+kde pro něj bude souboj s létající nestvůrou výhodnější. Poslední sáh
 pohybu se rozhodne nevyužít.</p>
 </blockquote>
 <h2 id="rozdělení-pohybu"><a class="header" href="#rozdělení-pohybu">Rozdělení pohybu</a></h2>
 <p>Pohyb nemusí vždy znamenat jen chůzi. Může se jednat o běh, skákání,
 šplhání nebo plavání. Tyto různé druhy pohybu je možné libovolně kombinovat
 s chůzí, nebo mohou tvořit celý pohyb.</p>
-<p>Ať se pohybuješ jakkoliv, délku každé části svého pohybu odečteš od
-své rychlosti, dokud celou svou rychlost nevyčerpáš, nebo dokud svůj pohyb
-neukončíš.</p>
-<p>Pokud má tvor rychlost 3 a rychlost letu 9, pak za každý sáh
-rychlosti může uletět 3 sáhy. Pokud tedy uletí 6 sáhů, přistane a 
-dál chce jít, může ujít pouhý 1 další sáh.</p>
+<p>Ať se pohybuješ jakkoliv, poměrnou délku každé části svého pohybu odečteš
+od své rychlosti, dokud celou svou rychlost nevyčerpáš, nebo dokud svůj
+pohyb neukončíš.</p>
+<p>Tvor s rychlostí 3 a rychlostí letu 9, pak za každý bod rychlosti může
+uletět 3 sáhy. Pokud tedy uletí 5 sáhů, přistane a dál chce jít, může ujít
+pouhý 1 další sáh.</p>
 <blockquote>
 <p>Harpie, se kterou Duncan bojoval a kterou v souboji těžce zranil se
 pokouší o útěk, má rychlost 3 a rychlost letu 12.</p>
 <p>Dva sáhy pohybu využije k chůzi, aby se dostala z dosahu Duncanova kopí.
-Zbylou třetinu pohybu </p>
+Zbylou třetinu pohybu pak využije k odletu.</p>
 </blockquote>
+<h2 id="ležení"><a class="header" href="#ležení">Ležení</a></h2>
+<p>Bojovníci se často ocitnou ležící na zemi. Ať už je někdo srazí nebo si
+sami lehnou. Ve hře se berou jako ležící.</p>
+<p>Pokud ležíš a s někým bojuješ, postavení se spotřebuje celý tvůj pohyb.
+Musíš vyčkat a vybojovat si pro zvednutí vhodnou chvíli. Pokud s nikým
+nebojuješ, pak postavení se stojí polovinu tvého pohybu zaokroukleno
+nahoru.</p>
+<p>Lehnout si můžeš kdykoliv během svého tahu, aniž bys spotřeboval svůj
+pohyb.</p>
+<h2 id="skákání"><a class="header" href="#skákání">Skákání</a></h2>
 <h1 id="náročný-terén"><a class="header" href="#náročný-terén">Náročný terén</a></h1>
 <p>Hromady trosek, trnité houští, příkré schodiště, sněhové závěje či zrádné
 mokřady. Nepřátelé málokdy číhají v prázdných síních nebo na pustých
 pláních. Bojiště místy leží na náročném terénu.</p>
 <p>Pohyb náročným terénem je obtížnější a vyžaduje oparnost. Každý sáh pohybu
 náročným terénem stojí 1 sáh pohybu navíc.</p>
-<p>Místo s tvorem, ať už přátelským či nepřátelským, se také počítá jako 
+<p>Místo s tvorem, ať už přátelským či nepřátelským, se také počítá jako
 náročný terén.</p>
 <h2 id="nástrahy"><a class="header" href="#nástrahy">Nástrahy</a></h2>
 <p>Občas se může stát, že terén je nejen obtížný, ale také zrádný. V těchto
@@ -1088,10 +1108,14 @@ zamrzlá řeka.</p>
 <p>Vypravěč určil, že překonání zamrzlé řeky je výzva s obtížností 3. Silas
 měl štěstí, jen tak tak se mu povedlo přejít, aniž by upadl. Hrdlořezové
 takové štěstí neměli. Jeden upadl a druhý se úplně probořil. V patách
-mu tak zůstal poslední z nich. </p>
+mu tak zůstal poslední z nich.</p>
 </blockquote>
 <h1 id="nebezpečný-terén"><a class="header" href="#nebezpečný-terén">Nebezpečný terén</a></h1>
 <h1 id="střežená-oblast"><a class="header" href="#střežená-oblast">Střežená oblast</a></h1>
+<p>Každý bojovník má kolem sebe oblast, kterou je schopný bránit před
+nepřáteli.</p>
+<p>Vstup do střežené oblasti funguje stejně jako nebezpečný terén, ale
+obtížnost výzvy určuje bojový hod tvora, již tuto oblast střeží.</p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Pojem</th><th>Význam</th></tr></thead><tbody>
 <tr><td style="text-align: left">Dosah</td><td></td></tr>
 <tr><td style="text-align: left">Finta</td><td></td></tr>
@@ -1137,26 +1161,27 @@ mu tak zůstal poslední z nich. </p>
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
 
+    </div>
     </body>
 </html>
