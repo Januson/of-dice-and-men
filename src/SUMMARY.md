@@ -73,7 +73,7 @@
       - [Omráčení](combat/attacking/tricks/knockout.md)
       - [Strčení](combat/attacking/tricks/shove.md)
       - [Sražení k zemi](combat/attacking/tricks/knockdown.md)
-      - [Únik ze zápasu](combat/attacking/tricks/disarm.md)
+      - [Únik ze zápasu]()
       - [Zápas](combat/attacking/tricks/grapple.md)
       - [Zatažení](combat/attacking/tricks/pull.md)
       - [Znehybnění](combat/attacking/tricks/pindown.md)
