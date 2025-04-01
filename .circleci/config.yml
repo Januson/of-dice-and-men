@@ -25,9 +25,6 @@ jobs:
   build:
     executor: docker-executor
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "5e:8a:1f:3c:89:17:7d:06:e6:14:03:df:30:50:20:90"
       - checkout
       - run:
           name: Version information
@@ -50,9 +47,6 @@ jobs:
       TARGET_BRANCH: gh-pages
     working_directory: ~/checkout
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "da:bc:4c:90:32:95:80:3f:6a:73:9c:e1:c8:f7:2d:d0"
       - checkout
       - attach_workspace:
           at: .
