@@ -16,10 +16,10 @@ TBD
 
 ## Planned features
 
-- [] Core Rulebook (In progress)
-- [] Narrator Guide
-- [] Bestiary
-- [] Statblock Generator
+- [ ] Core Rulebook (In progress)
+- [ ] Narrator Guide
+- [ ] Bestiary
+- [ ] Statblock Generator
 
 Rules are currently only available in czech language. Translation to
 english will be done once rules stabilize enough to make maintenance
