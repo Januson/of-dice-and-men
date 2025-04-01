@@ -54,7 +54,7 @@ jobs:
           name: Build with mdbook
           command: mdbook build
       - persist_to_workspace:
-          root: /
+          root: .
           paths:
             - book
             - .circleci
