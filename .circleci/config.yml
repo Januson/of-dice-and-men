@@ -19,6 +19,7 @@ executors:
   docker-executor:
     docker:
       - image: ubuntu:latest
+    resource_class: small
 
 commands:
   install_packages:
@@ -64,6 +65,9 @@ jobs:
     environment:
       TARGET_BRANCH: gh-pages
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "da:bc:4c:90:32:95:80:3f:6a:73:9c:e1:c8:f7:2d:d0"
       - install_packages:
           packages: "git"
       - attach_workspace:
