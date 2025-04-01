@@ -19,7 +19,6 @@ executors:
   docker-executor:
     docker:
       - image: rust:latest
-    working_directory: ~/project
 
 jobs:
   build:
@@ -45,7 +44,6 @@ jobs:
     executor: docker-executor
     environment:
       TARGET_BRANCH: gh-pages
-    working_directory: ~/checkout
     steps:
       - checkout
       - attach_workspace:
@@ -59,7 +57,7 @@ jobs:
             git clone --branch ${TARGET_BRANCH} --single-branch ${CIRCLE_REPOSITORY_URL} deploy
             cd deploy
             git rm -rf .
-            cp -r ~/project/book/* .
+            cp -r book/* .
       - run:
           name: Deploy release
           command: sh ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
