@@ -20,14 +20,24 @@ executors:
     docker:
       - image: ubuntu:latest
 
-jobs:
-  build:
-    executor: docker-executor
+commands:
+  install_packages:
+    parameters:
+      packages:
+        type: string
     steps:
       - run:
           name: Install Dependencies
           command: |
-            apt-get update && apt-get install -y curl git unzip
+            apt-get update
+            apt-get install -y <<parameters.packages>>
+
+jobs:
+  build:
+    executor: docker-executor
+    steps:
+      - install_packages:
+          packages: "curl git unzip"
       - checkout
       - run:
           name: Install mdbook from GitHub Releases
@@ -53,13 +63,11 @@ jobs:
     environment:
       TARGET_BRANCH: gh-pages
     steps:
-      - run:
-          name: Install Dependencies
-          command: |
-            apt-get update && apt-get install -y curl git unzip
+      - install_packages:
+          packages: "git"
       - checkout
       - attach_workspace:
-          at: .
+          at: book
       - run:
           name: Setup Git user
           command: sh ./.circleci/setup_user.sh $USER_EMAIL $USER_NAME
