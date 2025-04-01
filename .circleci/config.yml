@@ -24,11 +24,11 @@ jobs:
   build:
     executor: docker-executor
     steps:
-      - checkout
       - run:
           name: Install Dependencies
           command: |
-            apt-get update && apt-get install -y curl unzip
+            apt-get update && apt-get install -y curl git unzip
+      - checkout
       - run:
           name: Install mdbook from GitHub Releases
           command: |
@@ -53,6 +53,10 @@ jobs:
     environment:
       TARGET_BRANCH: gh-pages
     steps:
+      - run:
+          name: Install Dependencies
+          command: |
+            apt-get update && apt-get install -y curl git unzip
       - checkout
       - attach_workspace:
           at: .
