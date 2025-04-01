@@ -1,11 +1,9 @@
-#!/bin/sh -
+#!/bin/sh
 
-set -o errexit
-set -o nounset
-set -o pipefail
+set -euf
 
-if [[ $# -lt 2 ]]; then
-    echo "Error: Not enough arguments! $# out of 2 required..."
+if [ "$#" -lt 2 ]; then
+    echo "Error: Not enough arguments! ($# out of 2 required)"
     exit 1
 fi
 

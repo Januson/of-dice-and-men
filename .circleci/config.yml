@@ -18,7 +18,8 @@ workflows:
 executors:
   docker-executor:
     docker:
-      - image: januson/mdbook-builder:latest
+      - image: rust:latest
+    working_directory: ~/project
 
 jobs:
   build:
@@ -29,17 +30,16 @@ jobs:
           name: Version information
           command: rustc --version; cargo --version; rustup --version
       - run:
+          name: Install mdBook
+          command: |
+            cargo install mdbook
+      - run:
           name: Build with mdbook
           command: mdbook build
-      - run:
-          name: Copy circleci config
-          command: cp -r .circleci ./book
       - persist_to_workspace:
           root: book
           paths:
-            - "*"
-            - ".circleci/*"
-            - ".nojekyll"
+            - .
 
   deploy:
     executor: docker-executor
@@ -48,14 +48,18 @@ jobs:
     working_directory: ~/checkout
     steps:
       - checkout
+      - attach_workspace:
+          at: .
       - run:
           name: Setup Git user
           command: sh ./.circleci/setup_user.sh $USER_EMAIL $USER_NAME
       - run:
-          name: Prepare release branch
-          command: sh ./.circleci/nuke_branch.sh $TARGET_BRANCH
-      - attach_workspace:
-          at: .
-      - deploy:
+          name: Prepare deployment
+          command: |
+            git clone --branch ${TARGET_BRANCH} --single-branch ${CIRCLE_REPOSITORY_URL} deploy
+            cd deploy
+            git rm -rf .
+            cp -r ~/project/book/* .
+      - run:
           name: Deploy release
           command: sh ./.circleci/deploy.sh $TARGET_BRANCH $CIRCLE_SHA1
