@@ -18,17 +18,13 @@ workflows:
 executors:
   docker-executor:
     docker:
-      - image: ubuntu:latest
+      - image: cimg/base
 
 jobs:
   build:
     executor: docker-executor
     steps:
       - checkout
-      - run:
-          name: Install Dependencies
-          command: |
-            apt-get update && apt-get install -y curl unzip
       - run:
           name: Install mdbook from GitHub Releases
           command: |
