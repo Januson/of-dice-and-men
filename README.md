@@ -1,4 +1,4 @@
-[![Build Status](https://circleci.com/gh/Januson/of-dice-and-men.svg?style=svg)](https://app.circleci.com/pipelines/github/Januson/of-dice-and-men?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Januson/of-dice-and-men/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Januson/of-dice-and-men/tree/master)
 
 # Of Dice and Men
 
