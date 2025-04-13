@@ -33,6 +33,15 @@ commands:
             apt-get update
             apt-get install -y <<parameters.packages>>
 
+  determine_mdbook_version:
+    description: Determine and save mdbook version
+    steps:
+      - run:
+          name: Check mdbook version
+          command: |
+            MDBOOK_VERSION=$(curl -s https://api.github.com/repos/rust-lang/mdBook/releases/latest | grep -Po '"tag_name": "\K.*?(?=")')
+            echo "$MDBOOK_VERSION" > mdbook-version.txt
+
   restore_mdbook_cache:
     description: Restore the mdbook cache
     steps:
@@ -51,14 +60,15 @@ commands:
   install_mdbook:
     description: Create the mdbook cache
     steps:
-      - command: |
-          if [ ! -f /usr/local/bin/mdbook ]; then
-            MDBOOK_VERSION=$(cat mdbook-version.txt)
-            curl -L -o mdbook.tar.gz "https://github.com/rust-lang/mdBook/releases/download/${MDBOOK_VERSION}/mdbook-${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
-            tar -xzf mdbook.tar.gz
-            mv mdbook /usr/local/bin/mdbook
-            chmod +x /usr/local/bin/mdbook
-          fi
+      - run:
+          command: |
+            if [ ! -f /usr/local/bin/mdbook ]; then
+              MDBOOK_VERSION=$(cat mdbook-version.txt)
+              curl -L -o mdbook.tar.gz "https://github.com/rust-lang/mdBook/releases/download/${MDBOOK_VERSION}/mdbook-${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+              tar -xzf mdbook.tar.gz
+              mv mdbook /usr/local/bin/mdbook
+              chmod +x /usr/local/bin/mdbook
+            fi
 
 jobs:
   build:
@@ -67,11 +77,7 @@ jobs:
       - install_packages:
           packages: "curl git unzip"
       - checkout
-      - run:
-          name: Check mdbook version
-          command: |
-            MDBOOK_VERSION=$(curl -s https://api.github.com/repos/rust-lang/mdBook/releases/latest | grep -Po '"tag_name": "\K.*?(?=")')
-            echo "$MDBOOK_VERSION" > mdbook-version.txt
+      - determine_mdbook_version
       - restore_mdbook_cache
       - install_mdbook
       - save_mdbook_cache
